@@ -1,0 +1,19 @@
+.footer-container {
+  height: 209px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer-logo {
+  width: 122px;
+}
+
+.footer-text {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}

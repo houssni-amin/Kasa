@@ -1,0 +1,28 @@
+.error-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.error-h1 {
+  color: #ff6060;
+  font-size: 288px;
+  font-weight: 700;
+  margin: 100px 0 50px 0;
+}
+
+.error-text {
+  color: #ff6060;
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0 0 130px 0;
+}
+
+.error-button {
+  color: #ff6060;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 100px;
+}

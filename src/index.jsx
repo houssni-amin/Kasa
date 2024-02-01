@@ -7,6 +7,7 @@ import Propos from './pages/Propos'
 import Logement from './pages/Logement'
 import Footer from './components/Footer'
 import Error from './components/Error'
+import './style.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

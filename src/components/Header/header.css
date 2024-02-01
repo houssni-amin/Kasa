@@ -1,0 +1,27 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 100px 0 100px;
+}
+
+.header-logo {
+  height: 68px;
+}
+
+.header-nav {
+  font-size: 24px;
+}
+
+.header-button {
+  color: #ff6060;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.button-left {
+  margin-right: 25px;
+}
+
+.button-right {
+  margin-left: 25px;
+}

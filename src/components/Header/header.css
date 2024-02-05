@@ -25,3 +25,7 @@
 .button-right {
   margin-left: 25px;
 }
+
+nav .active {
+  text-decoration: underline;
+}

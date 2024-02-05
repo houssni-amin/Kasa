@@ -4,7 +4,7 @@ function Card({ title, cover }) {
   return (
     <div className="card-container">
       <img src={cover} alt="Cover" className="card-cover" />
-      <div className="deg"></div>
+      <div className="gradiant"></div>
       <p className="card-title">{title}</p>
     </div>
   )

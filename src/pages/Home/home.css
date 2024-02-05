@@ -1,0 +1,12 @@
+.home-container {
+  background-color: #f6f6f6;
+  padding: 56px;
+  margin: 50px;
+  border-radius: 25px;
+}
+
+.home-card {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+}

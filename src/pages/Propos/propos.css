@@ -1,0 +1,73 @@
+.propos-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.propos-top {
+  position: relative;
+  width: calc(100% - 200px);
+  height: 223px;
+  margin: 50px 100px;
+  object-fit: cover;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.propos-make {
+  position: absolute;
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  opacity: 30%;
+}
+
+.propos-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.propos-collapse {
+  margin-left: 200px;
+  margin-right: 200px;
+  width: calc(100% - 400px);
+  position: relative;
+}
+
+.propos-nom {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6060;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 47px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 25px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+svg {
+  transition: 0.3s ease;
+}
+
+.collapse-txt {
+  background-color: #f6f6f6;
+  color: #ff6060;
+  padding: 30px 10px 10px 10px;
+  margin: 0;
+  position: absolute;
+  top: 40px;
+  width: calc(100% - 20px);
+}

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Card from '../../components/Card'
 import logements from '../../data/logements.json'
 import imageHome from '../../assets/imageHome.jpeg'
@@ -13,11 +14,9 @@ function Home() {
       </div>
       <div className="home-card">
         {logements.map((logement) => (
-          <Card
-            key={logement.id}
-            cover={logement.cover}
-            title={logement.title}
-          />
+          <Link key={logement.id} to={`/logement/${logement.id}`}>
+            <Card cover={logement.cover} title={logement.title} />
+          </Link>
         ))}
       </div>
     </div>

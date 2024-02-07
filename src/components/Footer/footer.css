@@ -7,13 +7,19 @@
   justify-content: space-evenly;
 }
 
-.footer-logo {
+.footer-container img {
   width: 122px;
 }
 
-.footer-text {
+.footer-container p {
   color: white;
   font-size: 24px;
   font-weight: 500;
   margin: 0;
+}
+
+@media only screen and (max-width: 520px) {
+  .footer-container p {
+    font-size: 12px;
+  }
 }

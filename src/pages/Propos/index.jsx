@@ -24,8 +24,8 @@ function Propos() {
   return (
     <div className="propos-container">
       <div className="propos-top">
-        <img src={imagePropos} alt="Propos img" className="propos-img" />
-        <div className="propos-make"></div>
+        <img src={imagePropos} alt="Propos img" />
+        <div className="propos-dark"></div>
       </div>
       <div
         className="propos-collapse"
@@ -33,7 +33,7 @@ function Propos() {
           height: fiabilite ? '150px' : '80px',
         }}
       >
-        <button onClick={collapseFiablilte} className="propos-nom">
+        <button onClick={collapseFiablilte}>
           <span>Fiabilité</span>
           <svg
             width="24"
@@ -53,7 +53,7 @@ function Propos() {
           </svg>
         </button>
         {fiabilite && (
-          <p className="collapse-txt">
+          <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
             photos sont conformes aux logements, et toutes les informations sont
             régulièrement vérifiées par nos équipes.
@@ -67,7 +67,7 @@ function Propos() {
           height: respect ? '150px' : '80px',
         }}
       >
-        <button onClick={collapseRespect} className="propos-nom">
+        <button onClick={collapseRespect}>
           <span>Respect</span>
           <svg
             width="24"
@@ -87,7 +87,7 @@ function Propos() {
           </svg>
         </button>
         {respect && (
-          <p className="collapse-txt">
+          <p>
             La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
             comportement discriminatoire ou de perturbation du voisinage
             entraînera une exclusion de notre plateforme.
@@ -101,7 +101,7 @@ function Propos() {
           height: service ? '150px' : '80px',
         }}
       >
-        <button onClick={collapseService} className="propos-nom">
+        <button onClick={collapseService}>
           <span>Service</span>
           <svg
             width="24"
@@ -121,7 +121,7 @@ function Propos() {
           </svg>
         </button>
         {service && (
-          <p className="collapse-txt">
+          <p>
             Nos équipes se tiennent à votre disposition pour vous fournir une
             expérience parfaite. N'hésitez pas à nous contacter si vous avez la
             moindre question.
@@ -132,10 +132,10 @@ function Propos() {
       <div
         className="propos-collapse"
         style={{
-          height: securite ? '180px' : '80px',
+          height: securite ? '200px' : '80px',
         }}
       >
-        <button onClick={collapseSecurite} className="propos-nom">
+        <button onClick={collapseSecurite}>
           <span>Sécurité</span>
           <svg
             width="24"
@@ -155,7 +155,7 @@ function Propos() {
           </svg>
         </button>
         {securite && (
-          <p className="collapse-txt">
+          <p>
             La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
             pour les voyageurs, chaque logement correspond aux critères de
             sécurité établis par nos services. En laissant une note aussi bien à

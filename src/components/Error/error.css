@@ -6,18 +6,20 @@
   justify-content: flex-start;
 }
 
-.error-h1 {
+.error-container h1 {
   color: #ff6060;
   font-size: 288px;
   font-weight: 700;
-  margin: 100px 0 50px 0;
+  margin-top: 200px;
+  margin-bottom: 50px;
 }
 
-.error-text {
+.error-container p {
   color: #ff6060;
   font-size: 36px;
   font-weight: 500;
-  margin: 0 0 130px 0;
+  margin-bottom: 100px;
+  text-align: center;
 }
 
 .error-button {
@@ -25,4 +27,19 @@
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .error-container h1 {
+    font-size: 96px;
+  }
+
+  .error-container p {
+    font-size: 18px;
+    margin-bottom: 200px;
+  }
+
+  .error-button {
+    font-size: 14px;
+  }
 }

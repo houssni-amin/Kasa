@@ -29,7 +29,11 @@ nav .active {
   text-decoration: underline;
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 600px) {
+  .header-container {
+    margin-top: 20px;
+  }
+
   .header-container img {
     width: 145px;
   }

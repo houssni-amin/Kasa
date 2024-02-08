@@ -6,11 +6,11 @@ import './home.css'
 
 function Home() {
   return (
-    <div>
-      <div className="home-top">
-        <img src={imageHome} alt="Plage Home" className="home-img" />
-        <div className="home-make"></div>
-        <p className="home-txt">Chez vous, partout et ailleurs</p>
+    <div className="home-container">
+      <div className="home-img">
+        <img src={imageHome} alt="Plage Home" />
+        <div className="home-dark"></div>
+        <p>Chez vous, partout et ailleurs</p>
       </div>
       <div className="home-card">
         {logements.map((logement) => (

@@ -3,9 +3,9 @@ import './card.css'
 function Card({ title, cover }) {
   return (
     <div className="card-container">
-      <img src={cover} alt="Cover" className="card-cover" />
+      <img src={cover} alt="Cover" />
       <div className="gradiant"></div>
-      <p className="card-title">{title}</p>
+      <p>{title}</p>
     </div>
   )
 }

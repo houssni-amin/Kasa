@@ -18,7 +18,7 @@
   margin: 0;
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 600px) {
   .footer-container p {
     font-size: 12px;
   }

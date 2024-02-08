@@ -67,10 +67,10 @@ function Logement() {
   }
 
   return (
-    <div>
+    <div className="logement-container">
       <div className="logement-top">
         <div className="logement-top-left">
-          <h1 className="logement-title">{title}</h1>
+          <h1>{title}</h1>
           <p className="logement-location">{location}</p>
           <div className="tags">
             {tags.map((tag, index) => (
@@ -80,29 +80,25 @@ function Logement() {
             ))}
           </div>
         </div>
+
         <div className="logement-top-right">
           <div className="host-infos">
+            <div className="stars">{StarsRating(rating)}</div>
             <div className="name-picture">
               <div className="firstname-lastname">
-                <p className="host-name">{lastName}</p>
-                <p className="host-name">{firstName}</p>
+                <p>{lastName}</p>
+                <p>{firstName}</p>
               </div>
-              <img src={picture} alt="host img" className="host-picture" />
+              <img src={picture} alt="host img" />
             </div>
-            <div className="stars">{StarsRating(rating)}</div>
           </div>
         </div>
       </div>
 
       <div className="collapse-container">
-        <div
-          className="logement-collapse collapse-left"
-          style={{
-            height: description ? '450px' : '80px',
-          }}
-        >
-          <button onClick={collapseDescription} className="logement-nom">
-            <span>Description</span>
+        <div className="logement-collapse collapse-description">
+          <button onClick={collapseDescription}>
+            <p>Description</p>
             <svg
               width="24"
               height="14"
@@ -123,9 +119,9 @@ function Logement() {
           {descriptionCollapse && <p className="logement-txt">{description}</p>}
         </div>
 
-        <div className="logement-collapse collapse-right">
-          <button onClick={collapseEquipments} className="logement-nom">
-            <span>Équipements</span>
+        <div className="logement-collapse collapse-equipements">
+          <button onClick={collapseEquipments}>
+            <p>Équipements</p>
             <svg
               width="24"
               height="14"

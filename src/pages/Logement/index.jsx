@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import logements from '../../data/logements.json'
-import { useState } from 'react'
 import './logement.css'
+import Collapse from '../../components/Collapse'
 
 function Logement() {
   const { id } = useParams()
@@ -9,15 +9,6 @@ function Logement() {
   const { title, location, description, equipments, tags, host, rating } =
     logement
   const { name, picture } = host
-
-  const [descriptionCollapse, setDescriptionCollapse] = useState(false)
-  const collapseDescription = () => {
-    setDescriptionCollapse(!descriptionCollapse)
-  }
-  const [equipmentsCollapse, setEquipmentsCollapse] = useState(false)
-  const collapseEquipments = () => {
-    setEquipmentsCollapse(!equipmentsCollapse)
-  }
 
   const [firstName, lastName] = name.split(' ')
 
@@ -94,58 +85,19 @@ function Logement() {
           </div>
         </div>
       </div>
-
-      <div className="collapse-container">
-        <div className="logement-collapse collapse-description">
-          <button onClick={collapseDescription}>
-            <p>Description</p>
-            <svg
-              width="24"
-              height="14"
-              viewBox="0 0 24 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              style={{
-                transform: descriptionCollapse ? 'rotate(180deg)' : 'rotate(0)',
-                transition: '0.3s ease',
-              }}
-            >
-              <path
-                d="M10.7897 13.2103C11.4591 13.8797 12.5462 13.8797 13.2157 13.2103L23.4979 2.92804C24.1674 2.25862 24.1674 1.17148 23.4979 0.502064C22.8285 -0.167355 21.7414 -0.167355 21.072 0.502064L12 9.57403L2.92804 0.507419C2.25862 -0.162 1.17148 -0.162 0.502064 0.507419C-0.167355 1.17684 -0.167355 2.26397 0.502064 2.93339L10.7843 13.2157L10.7897 13.2103Z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          {descriptionCollapse && <p className="logement-txt">{description}</p>}
+      <div className="logement-collapses">
+        <div className="collapse-left">
+          <Collapse title="Description" text={description} />
         </div>
-
-        <div className="logement-collapse collapse-equipements">
-          <button onClick={collapseEquipments}>
-            <p>Équipements</p>
-            <svg
-              width="24"
-              height="14"
-              viewBox="0 0 24 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              style={{
-                transform: equipmentsCollapse ? 'rotate(180deg)' : 'rotate(0)',
-                transition: '0.3s ease',
-              }}
-            >
-              <path
-                d="M10.7897 13.2103C11.4591 13.8797 12.5462 13.8797 13.2157 13.2103L23.4979 2.92804C24.1674 2.25862 24.1674 1.17148 23.4979 0.502064C22.8285 -0.167355 21.7414 -0.167355 21.072 0.502064L12 9.57403L2.92804 0.507419C2.25862 -0.162 1.17148 -0.162 0.502064 0.507419C-0.167355 1.17684 -0.167355 2.26397 0.502064 2.93339L10.7843 13.2157L10.7897 13.2103Z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          {equipmentsCollapse && (
-            <div className="logement-txt">
-              {equipments.map((equipments, index) => (
-                <p key={index}>{equipments}</p>
-              ))}
-            </div>
-          )}
+        <div className="collapse-right">
+          <Collapse
+            title="Équipements"
+            text={equipments.map((equipment, index) => (
+              <p key={index} className="txt-equipements">
+                {equipment}
+              </p>
+            ))}
+          />
         </div>
       </div>
     </div>

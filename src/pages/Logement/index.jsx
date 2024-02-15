@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import logements from '../../data/logements.json'
 import './logement.css'
 import Collapse from '../../components/Collapse'
@@ -6,6 +6,11 @@ import Collapse from '../../components/Collapse'
 function Logement() {
   const { id } = useParams()
   const logement = logements.find((logement) => logement.id === id)
+
+  if (!logement) {
+    return <Navigate to="/error" />
+  }
+
   const { title, location, description, equipments, tags, host, rating } =
     logement
   const { name, picture } = host

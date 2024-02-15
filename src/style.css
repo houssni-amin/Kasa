@@ -2,3 +2,9 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
+
+@media only screen and (max-width: 600px) {
+  .content-body {
+    min-height: calc(100vh - 297px);
+  }
+}

@@ -32,11 +32,12 @@
 @media only screen and (max-width: 600px) {
   .error-container h1 {
     font-size: 96px;
+    margin-top: 100px;
+    margin-bottom: 0;
   }
 
   .error-container p {
     font-size: 18px;
-    margin-bottom: 200px;
   }
 
   .error-button {

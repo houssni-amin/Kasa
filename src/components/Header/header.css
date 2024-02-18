@@ -41,4 +41,8 @@ nav .active {
   .header-nav {
     font-size: 12px;
   }
+
+  .button-right {
+    margin-left: 20px;
+  }
 }

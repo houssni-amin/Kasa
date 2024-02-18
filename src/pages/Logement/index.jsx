@@ -2,6 +2,7 @@ import { Navigate, useParams } from 'react-router-dom'
 import logements from '../../data/logements.json'
 import './logement.css'
 import Collapse from '../../components/Collapse'
+import Slideshow from '../../components/Slideshow'
 
 function Logement() {
   const { id } = useParams()
@@ -11,8 +12,16 @@ function Logement() {
     return <Navigate to="/error" />
   }
 
-  const { title, location, description, equipments, tags, host, rating } =
-    logement
+  const {
+    title,
+    location,
+    description,
+    equipments,
+    tags,
+    host,
+    rating,
+    pictures,
+  } = logement
   const { name, picture } = host
 
   const [firstName, lastName] = name.split(' ')
@@ -64,6 +73,9 @@ function Logement() {
 
   return (
     <div className="logement-container">
+      <div className="logement-slideshow-container">
+        <Slideshow images={pictures} />
+      </div>
       <div className="logement-top">
         <div className="logement-top-left">
           <h1>{title}</h1>

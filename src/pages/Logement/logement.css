@@ -5,15 +5,18 @@
   align-items: center;
 }
 
+.logement-slideshow-container {
+  width: 90%;
+  height: 415px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .logement-top {
   width: 90%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-}
-
-.logement-top-left {
-  margin-top: 50px;
 }
 
 .logement-top-left h1 {
@@ -49,10 +52,6 @@
   justify-content: center;
 }
 
-.logement-top-right {
-  margin-top: 50px;
-}
-
 .host-infos {
   display: flex;
   flex-direction: column-reverse;
@@ -61,7 +60,7 @@
 .firstname-lastname {
   margin-right: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: end;
 }
@@ -114,13 +113,15 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .logement-slideshow-container {
+    height: 255px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
   .logement-top {
     flex-direction: column;
     margin-bottom: 0;
-  }
-
-  .logement-top-left {
-    margin-top: 20px;
   }
   .logement-top-right {
     margin-top: 10px;

@@ -1,3 +1,4 @@
+// Importation du composant Collapse
 import Collapse from '../../components/Collapse'
 import './propos.css'
 import imagePropos from '../../assets/imagePropos.jpeg'

@@ -13,8 +13,11 @@ function Home() {
         <p>Chez vous, partout et ailleurs</p>
       </div>
       <div className="home-card">
+        {/* Mapping à travers les données de logements et création de liens */}
         {logements.map((logement) => (
           <Link key={logement.id} to={`/logement/${logement.id}`}>
+            {/* Lien vers la page de détail du logement */}
+            {/* Affichage de la carte pour chaque logement */}
             <Card cover={logement.cover} title={logement.title} />
           </Link>
         ))}

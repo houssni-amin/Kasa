@@ -1,4 +1,5 @@
 // Importation du composant Collapse
+import Banner from '../../components/Banner'
 import Collapse from '../../components/Collapse'
 import './propos.css'
 import imagePropos from '../../assets/imagePropos.jpeg'
@@ -6,11 +7,10 @@ import imagePropos from '../../assets/imagePropos.jpeg'
 function Propos() {
   return (
     <div className="propos-container">
-      <div className="propos-top">
-        <img src={imagePropos} alt="Propos img" />
-        <div className="propos-dark"></div>
-      </div>
+      {/* Utilisation du composant Banner */}
+      <Banner imgBanner={imagePropos} txtBanner="" />
       <div className="propos-collapses">
+        {/* Utilisation du composant Collapse pour chaque Collapse */}
         <Collapse
           title="Fiabilité"
           text="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
